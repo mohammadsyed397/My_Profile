@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f9; /* Light background */
+    background-color: #208a6c; /* Light gray background */
     margin: 0;
     padding: 20px;
 }
@@ -8,10 +8,15 @@ body {
 .profile-container {
     max-width: 600px;
     margin: auto;
-    background: #ffffff; /* White background */
+    background: black;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.profile-container:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
 .profile-header {
@@ -19,36 +24,43 @@ body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    border: 4px solid #3498db; /* Blue border */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 4px solid #007bff; /* Blue border */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .profile-name {
-    font-size: 30px;
-    color: #2980b9; /* Blue text */
-    margin-top: 10px;
+    font-size: 28px;
+    color: #343a40; /* Darker text */
+    margin: 10px 0;
 }
 
 .profile-bio {
-    font-size: 18px;
-    color: #7f8c8d; /* Gray text */
+    font-size: 16px;
+    color: #6c757d; /* Lighter text */
+    margin-bottom: 20px;
 }
 
 .contact-info, .social-links, .technical-skills, .experience, .education {
     margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #f0faff; /* Light blue background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Padding for better spacing */
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #e9f7ff; /* Light blue background */
 }
 
 h2 {
     font-size: 22px;
-    color: #3498db; /* Bright blue for headings */
-    margin-bottom: 10px;
+    color: #007bff; /* Blue color for headings */
+    border-bottom: 2px solid #007bff; /* Bottom border */
+    padding-bottom: 5px;
 }
 
 ul {
@@ -56,50 +68,30 @@ ul {
     padding: 0;
 }
 
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-.skills-list li {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    padding: 5px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-}
-
-.skills-list li:hover {
-    background-color: #e1f5fe; /* Light hover effect */
-}
-
-.skill-logo {
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
-    margin-right: 10px; /* Space between logo and text */
+ul li {
+    margin: 10px 0;
+    font-size: 16px;
 }
 
 a {
-    color: #2980b9; /* Blue links */
+    color: #007bff; /* Link color */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1f618d; /* Darker blue on hover */
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
-.experience ul, .education ul {
-    margin-top: 10px;
-}
-
-.experience li, .education li {
-    padding: 5px 0;
-    border-bottom: 1px solid #dcdcdc; /* Light separator line */
-}
-
-.experience li:last-child, .education li:last-child {
-    border-bottom: none; /* Remove last separator */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    .profile-name {
+        font-size: 24px; /* Slightly smaller font size */
+    }
+    .profile-bio, ul li {
+        font-size: 14px; /* Smaller text on mobile */
+    }
 }
